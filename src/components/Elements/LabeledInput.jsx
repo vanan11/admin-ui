@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "./Input";
 
 function LabeledInput(props) {
   const { label, id, ...rest } = props;
@@ -9,11 +10,7 @@ function LabeledInput(props) {
         {label}
       </label>
 
-      <input
-        className="py-3 pl-4 text-sm rounded-md w-full bg-white"
-        id={id}
-        {...rest}
-      />
+      <Input id={id} {...rest} />
     </>
   );
 }
