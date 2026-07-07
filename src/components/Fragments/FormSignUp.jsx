@@ -15,7 +15,7 @@ function FormSignUp() {
                 <LabeledInput
                   label="Name"
                   type="text"
-                  placeholder="Aji Seno"
+                  placeholder="Evan Arya"
                   name="name"
                 />
             </div>
