@@ -11,9 +11,9 @@ function Logo(props) {
   return (
     <>
       <div
-        className={`flex justify-center font-poppins tracking-wide 
-          ${variantClasses[variant] || variantClasses.primary}`}
-      >
+          className={`logo-text flex justify-center font-poppins tracking-wide 
+            ${variantClasses[variant] || variantClasses.primary}`}
+        >
         <span className="font-bold">FINE</span>
         bank
         <span className="font-bold">.IO</span>

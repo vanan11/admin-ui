@@ -11,7 +11,7 @@ function CardExpenseBreakdown(props) {
         title="Expenses Breakdown"
 				desc={
           <div className="h-full md:grid md:grid-cols-3 gap-4">
-            {data.map((item) => (
+            {(Array.isArray(data) ? data : []).map((item) => (
               <div key={item.id} className="flex items-center justify-between">
                 <div className="flex">
                   <div>

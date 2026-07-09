@@ -4,6 +4,7 @@ import SignUpPage from "./pages/signUp";
 import ErrorPage from "./pages/error";
 import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
+import ExpensesPage from "./pages/expenses";
 import { 
   createBrowserRouter, 
   Navigate,
@@ -55,8 +56,24 @@ const myRouter = createBrowserRouter([
         </RequireAuth>
       ),
     },
+    {
+      path: "/expenses",
+      element: (
+        <RequireAuth>
+          <ExpensesPage />
+        </RequireAuth>
+      ),
+    },
+    {
+      path: "/expense",
+      element: (
+        <RequireAuth>
+          <ExpensesPage />
+        </RequireAuth>
+      ),
+    },
   ]);
-
+    
   return (
     <>
       <RouterProvider router={myRouter} />

@@ -1,0 +1,43 @@
+.dark-mode {
+  background-color: #2f2f2f;
+  color: #d9d9d9;
+}
+
+.dark-mode .bg-special-mainBg {
+  background-color: #2f2f2f !important;
+}
+
+.dark-mode .bg-white {
+  background-color: #242424 !important;
+  color: #d9d9d9 !important;
+}
+
+.dark-mode .font-bold {
+  color: #ffffff !important;
+}
+
+.dark-mode .text-gray-03,
+.dark-mode .text-gray-500,
+.dark-mode .text-gray-400 {
+  color: #b5b5b5 !important;
+}
+
+.dark-mode input {
+  background-color: #2f2f2f !important;
+  color: white !important;
+  border-color: #777 !important;
+}
+
+.dark-mode .border-gray-05,
+.dark-mode .border-gray-200 {
+  border-color: #555 !important;
+}
+
+.dark-mode .bg-special-bg {
+  background-color: #555 !important;
+}
+
+.dark-mode .logo-text,
+.dark-mode .logo-text span {
+  color: #299d91 !important;
+}

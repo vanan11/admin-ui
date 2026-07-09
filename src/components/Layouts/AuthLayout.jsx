@@ -1,23 +1,28 @@
-import React, { useContext} from 'react'
+import React, { useContext } from "react";
 import Logo from "../Elements/Logo";
 import { ThemeContext } from "../../context/themeContext";
+import { ModeContext } from "../../context/modeContext";
 
-function AuthLayout(props) {  
-    const { children } = props;
-    const { theme } = useContext(ThemeContext);
+function AuthLayout(props) {
+  const { children } = props;
+
+  const { theme } = useContext(ThemeContext);
+  const { darkMode } = useContext(ModeContext);
 
   return (
-    <>
-    <main className={`min-h-screen bg-special-mainBg flex items-center justify-center ${theme.name}`}>
-      {/* container start */}
+    <main
+      className={`min-h-screen flex items-center justify-center ${
+        darkMode
+          ? "bg-[#2F2F2F] text-white"
+          : `bg-special-mainBg ${theme.name}`
+      }`}
+    >
       <div className="w-full max-w-sm">
-    <Logo/>
-    {children}
+        <Logo />
+        {children}
       </div>
-      {/* container end */}
-    </main>  
-    </>
-    );
+    </main>
+  );
 }
 
-export default AuthLayout
+export default AuthLayout;

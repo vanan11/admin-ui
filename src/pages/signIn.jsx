@@ -4,9 +4,11 @@ import FormSignIn from '../components/Fragments/FormSignIn'
 import { loginService } from '../services/authService'
 import { AuthContext } from '../context/authContext'
 import AppSnackbar from '../components/Elements/AppSnackbar'
+import { ModeContext } from "../context/modeContext";
 
 function signIn() {
   const { login } = React.useContext(AuthContext);
+  const { darkMode, toggleMode } = useContext(ModeContext);
   	const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
@@ -28,8 +30,20 @@ function signIn() {
   };
 
   return (
-    <AuthLayout>
-      <FormSignIn onSubmit={handleLogin} />
+        <AuthLayout>
+      <div className={darkMode ? "text-white" : ""}>
+        <FormSignIn onSubmit={handleLogin} />
+
+        <div className="flex justify-center mt-6">
+          <button
+            onClick={toggleMode}
+            className="text-2xl"
+          >
+            {darkMode ? "☀️" : "🌙"}
+          </button>
+        </div>
+      </div>
+
       <AppSnackbar
         open={snackbar.open}
         message={snackbar.message}
